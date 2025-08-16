@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionList>
+  <Extension Id="com.myextension.extension">
+    <!-- Options: DRWV, FLPR, IDSN, AICY, ILST, PHSP, PHXS, PPRO, PRLD, AEFT, DEMO -->
+    <HostList>
+      <Host Name="ILST" Port="8705"/>
+    </HostList>
+  </Extension>
+  <Extension Id="com.myextension.server">
+    <HostList>
+      <Host Name="ILST" Port="8805"/>
+    </HostList>
+  </Extension>
+</ExtensionList>

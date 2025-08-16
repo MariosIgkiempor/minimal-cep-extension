@@ -1,0 +1,12 @@
+/* 
+  Root TS Config pointing to the tsconfig.json for each project in workspace
+  This allows `pnpm tsc` to run in the root of the workspace and check all projects
+*/
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "files": [],
+  "references": [
+    { "path": "./server/tsconfig.json" },
+    { "path": "./frontend/tsconfig.json" }
+  ]
+}

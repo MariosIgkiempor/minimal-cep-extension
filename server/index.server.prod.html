@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script type="module">
+      const path = cep_node.require("path");
+      const csInterface = new CSInterface();
+      const extensionRoot = csInterface.getSystemPath(SystemPath.EXTENSION);
+      cep_node.require(path.join(extensionRoot, "server", "main.js"));
+    </script>
+    <title>Local Server</title>
+  </head>
+  <body></body>
+</html>

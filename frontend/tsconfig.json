@@ -1,0 +1,9 @@
+/* Base TS Config to combine Node and browser configs */
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "files": [],
+  "references": [
+    { "path": "./tsconfig/tsconfig.app.json" },
+    { "path": "./tsconfig/tsconfig.node.json" }
+  ]
+}

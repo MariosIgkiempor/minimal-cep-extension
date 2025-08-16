@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "pnpm build:bundle && pnpm build:static-assets",
+    "build:bundle": "esbuild src/main.ts --bundle --platform=node --outfile=../build/server/main.js --format=cjs --minify",
+    "build:static-assets": "cp index.server.prod.html ../build/server/index.server.html",
+    "dev": "concurrently --kill-others-on-fail \"pnpm run dev:static-assets\"  \"pnpm run build:bundle --watch\" \"DEBUG=express:* nodemon --watch ../build/server ../build/server/main.js\"",
+    "dev:static-assets": "cp index.server.dev.html ../build/server/index.server.html"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.4",
+    "nodemon": "^3.1.10"
+  }
+}
