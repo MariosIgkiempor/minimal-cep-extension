@@ -35,7 +35,7 @@ export const ServerHealthCheck: FC<PropsWithChildren> = ({ children }) => {
         <button
           type="button"
           onClick={() => {
-            window.location.href = "http://localhost:55540";
+            window.location.href = "http://localhost:12345";
           }}
         >
           Press to refresh the page

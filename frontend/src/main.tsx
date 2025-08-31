@@ -1,10 +1,10 @@
 import { ServerHealthCheck } from "@/components/ServerHealthCheck";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-
-import "@/index.css";
 import { App } from "./components/App";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+import "@/index.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,6 +27,6 @@ if (rootElement && !rootElement.innerHTML) {
           <App />
         </ServerHealthCheck>
       </QueryClientProvider>
-    QueryClientProvider</StrictMode>,
+    </StrictMode>,
   );
 }

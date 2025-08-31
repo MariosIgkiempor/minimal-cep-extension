@@ -11,8 +11,7 @@ export const App: FC = () => {
   })
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-3xl font-bold">Hello World</h1>
+    <div className="flex flex-col justify-center text-white">
       <p className="text-lg">Welcome to the Adobe Illustrator Extension</p>
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error.message}</p>}

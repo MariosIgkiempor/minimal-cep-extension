@@ -2,13 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script src="../js/lib/CSInterface-v12.0.0.js"></script>
+
     <script type="module">
-      const path = cep_node.require("path");
-      const csInterface = new CSInterface();
-      const extensionRoot = csInterface.getSystemPath(SystemPath.EXTENSION);
-      cep_node.require(path.join(extensionRoot, "server", "main.js"));
+      try {
+        const path = cep_node.require("path");
+        const csInterface = new CSInterface();
+        const extensionRoot = csInterface.getSystemPath(SystemPath.EXTENSION);
+        cep_node.require(path.join(extensionRoot, "server", "main.js"));
+      } catch (error) {
+        console.error("Node Server Crashed - preventing infinite reload loop from CEP");
+        console.error(error, error.stack);
+      }
     </script>
-    <title>Local Server</title>
+    <title>My Extension local server</title>
   </head>
   <body></body>
 </html>

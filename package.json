@@ -7,10 +7,10 @@
     "build:preview": "pnpm build && pnpm run package-extension && pnpm install-package",
     "concurrently": "concurrently --prefix-colors \"cyan,magenta,green,yellow\" --kill-others-on-fail",
     "dev": "./scripts/dev.sh",
-    "install-package": "./scripts/install-package.sh",
+    "install-package": "./scripts/install-package.sh macos",
     "lint": "biome check && pnpm tsc",
     "lint:fix": "biome check --fix",
-    "package-extension": "./scripts/package-extension.sh",
+    "package-extension": "./scripts/package-extension.sh macos",
     "project-setup": "./scripts/project-setup.sh",
     "test": "vitest run",
     "test:watch": "vitest watch"
